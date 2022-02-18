@@ -1,0 +1,2 @@
+datasets==1.18.3
+segments-ai==0.58
