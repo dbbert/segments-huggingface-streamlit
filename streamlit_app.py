@@ -32,7 +32,7 @@ def export_dataset():
         client = SegmentsClient(segments_api_key)
         release = client.get_release(f'{segments_dataset_owner}/{segments_dataset_name}', f'{segments_release}')
         dataset = release2dataset(release, True)
-        dataset.push_to_hub(f'{hf_dataset_owner}/{hf_dataset_name}')
+        dataset.push_to_hub(f'{hf_dataset_owner}/{hf_dataset_name}', token=hf_api_key)
 
         # Success!
         st.balloons()
